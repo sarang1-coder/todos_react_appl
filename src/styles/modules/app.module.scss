@@ -1,5 +1,39 @@
 @import '../_mixins.scss';
 
+/* AppHeader.module.css */
+:root {
+  --text-color-day: black;
+  --bg-color-day: white;
+  --text-color-night: white;
+  --bg-color-night: #1a1a1a;
+}
+
+.appHeader {
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.addButton {
+  transition: filter 0.3s;
+}
+
+/* Day Mode */
+.day {
+  background-color: var(--bg-color-day);
+  color: var(--text-color-day);
+}
+
+/* Night Mode */
+.night {
+  background-color: var(--bg-color-night);
+  color: var(--text-color-night);
+}
+
+.addButton:hover {
+  filter: grayscale(100%);
+}
+
 .app__wrapper {
 	max-width: 750px;
 	width: 100%;

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Button, { SelectButton } from './Button';
 import styles from '../styles/modules/app.module.scss';
 import TodoModal from './TodoModal';
-import { updateFilterStatus,clearAllTodos } from '../slices/todoSlice';
+import { updateFilterStatus} from '../slices/todoSlice';
 
 function AppHeader() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -16,9 +16,6 @@ function AppHeader() {
     dispatch(updateFilterStatus(e.target.value));
   };
 
-  const handleclearTodos=()=>{
-    dispatch(clearAllTodos());
-  }
 
   return (
     <div className={styles.appHeader}>
@@ -28,12 +25,6 @@ function AppHeader() {
         Add Task
       </Button>
       <div className={styles.rightBtn}>
-        <button
-          style={{marginRight:'1rem'}} 
-          variant="primary" 
-          onClick={handleclearTodos}>
-            Delete Todos
-        </button>
         <SelectButton
           id="status"
           onChange={(e) => updateFilter(e)}

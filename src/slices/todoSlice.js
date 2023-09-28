@@ -67,9 +67,6 @@ export const todoSlice = createSlice({
     },
     updateFilterStatus: (state, action) => {
       state.filterStatus = action.payload;
-    },
-    clearAllTodos:(state)=>{
-      state.todos=[];
     }
   }
 });

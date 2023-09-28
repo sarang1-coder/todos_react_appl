@@ -13,7 +13,6 @@ function App() {
   return (
     <>
     <div className="container banner">
-      <canvas id="canvas" width="400" height="400">
         <PageTitle>My ToDo APP</PageTitle>
         <div className={styles.app__wrapper}>
           <AppHeader />
@@ -28,7 +27,7 @@ function App() {
           },
         }}
       />
-      </canvas>
+
     </>
   );
 }
